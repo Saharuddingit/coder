@@ -1,0 +1,380 @@
+* {
+    font-family: "Montserrat";
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 128px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+#header h1 {
+    margin: 0;
+    animation: bouncein 10s infinite;
+    /* animation: flash 3s infinite; */
+}
+
+@keyframes bouncein {
+    0% {
+        filter: opacity(0);
+        transform: translateY(-20px);
+    }
+    35% {
+        filter: opacity(0.25);
+        transform: translateY(0);
+    }
+    70% {
+        filter: opacity(0.5);
+        transform: translateY(-10px);
+    }
+    100% {
+        filter: opacity(1);
+        transform: translateY(0);
+    }
+}
+
+@keyframes flash {
+    from {
+        filter: opacity(0);
+    }
+    to {
+        filter: opacity(1);
+    }
+}
+
+nav > a:hover {
+    color: #ffc108;
+}
+
+section {
+    padding: 64px 128px;
+}
+
+img, iframe {
+    width: 100%;
+}
+
+#landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#landing > div {
+    width: 50%;
+}
+
+#landing p {
+    margin-bottom: 32px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+p {
+    color: #979797 ;
+    margin-bottom: 32px;
+    font-size: 24px;
+}
+
+.btn {
+    background-color: #ffc108;
+    color: white;
+    padding: 8px 24px;
+}
+
+.btn-alt {
+    background-color: white;
+    color: black;
+    margin-right: 8px;
+    border: 2px solid #ffc108;
+}
+
+nav > a {
+    margin-left: 12px;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#about > div {
+    width: 50%;
+}
+
+.tiga {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tiga-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tiga-item div {
+    width: 50px;
+    height: 10px;
+    text-align: center;
+    background-color: #ffc108;
+    margin-bottom: 16px;
+}
+
+#service-kepala {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#service-kepala h1 {
+    position: relative;
+}
+
+#service-kepala h1::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url("./images/accent2.svg");
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    z-index: -1;
+
+}
+
+#service-badan {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 128px;
+    margin-top: 72px;
+}
+
+#service-badan-item:hover {
+    transform: scale(1.1);
+}
+
+#service-badan-item img:hover {
+    filter: grayscale(0);
+}
+
+#service-badan-item img {
+    width: 100%;
+    filter: grayscale(1);
+}
+
+#service-badan-item h2 {
+    padding: 0 16px;
+}
+
+#service-badan-item p {
+    padding: 0 16px;
+    font-size: 16px;
+}
+
+#service-badan-item {
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+#contact h1 {
+    position: relative;
+}
+
+#contact > h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("./images/accent1.svg");
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    z-index: -1;
+}
+
+.contact-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    column-gap: 128px;
+}
+
+.contact-detail > div, .contact-detail > form {
+    width: 50%;
+}
+
+.form-grup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    margin-top: 32px;
+    grid-template-areas: "name subject"
+                            "email phone"
+                            "message message";
+}
+
+#input-name {
+    grid-area: name;
+}
+
+#input-subject {
+    grid-area: subject;
+}
+
+#input-email {
+    grid-area: email;
+}
+
+#input-phone {
+    grid-area: phone;
+}
+
+#input-message {
+    grid-area: message;
+}
+
+.grup-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.grup-input input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.grup-input input:focus {
+    border-bottom: 2px solid #ffc108;
+}
+
+.grup-input label {
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #ffc108;
+    padding: 64px 32px;
+}
+
+form h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+form button {
+    border: none;
+}
+
+form button:hover{
+    cursor: pointer;
+}
+
+footer {
+    padding: 16px 128px;
+    background-color: #ffc108;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+    width: 50%;
+}
+
+.sosmed {
+    display: flex;
+    column-gap: 32px;
+}
+
+@media only screen and (max-width: 1200px ) {
+    #service-badan {
+        gap: 24px;
+    }
+
+    .contact-detail {
+        gap: 24px;
+    }
+
+    .form-grup {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 992px ) {
+    header, #footer {
+        padding: 16px 32px;
+    }
+
+    #landing {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 64px 32px;
+    }
+
+    #landing > div {
+        width: 100%;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 64px 32px;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    #service-badan {
+        gap: 16px;
+    }
+
+    .contact-detail {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 32px;
+    }
+
+    .contact-detail > form, .contact-detail > div {
+        width: 100%;
+    }
+}
